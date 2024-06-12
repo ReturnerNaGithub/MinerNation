@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThirdwebProvider } from "@/app/thirdweb";
+import { ThirdwebProvider } from "thirdweb/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,8 +20,9 @@ export default function RootLayout({
       <body className={inter.className}>
 
         <ThirdwebProvider>
-       {children}
-</ThirdwebProvider>
+{children}
+
+        </ThirdwebProvider>
         
         
         

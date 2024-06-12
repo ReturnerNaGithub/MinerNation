@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThirdwebProvider } from "@/app/thirdweb";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Miners Nation",
-  description: "Staking App for GSD NFT",
+  description: "Staking App for ",
 };
 
 export default function RootLayout({
@@ -17,15 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-
-        <ThirdwebProvider>
-       {children}
-</ThirdwebProvider>
-        
-        
-        
-        </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
