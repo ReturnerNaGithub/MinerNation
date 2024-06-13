@@ -1,0 +1,36 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+
+import "./globals.css";
+import { ThirdwebProvider } from "@/app/thirdweb";
+
+const inter = Inter({ subsets: ["latin"] });
+
+const laser =localFont(
+ 
+);
+
+export const metadata: Metadata = {
+  title: "Miners Nation",
+  description: "Staking App for GSD NFT",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className = {"${laser.variable} font-laser" }>
+      <body className={inter.className}>
+
+        <ThirdwebProvider>
+       {children}
+</ThirdwebProvider>
+        
+        
+        
+        </body>
+    </html>
+  );
+}
